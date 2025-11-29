@@ -730,6 +730,38 @@
     z-index: 10;
 }
 
+.reservation-button-card {
+    position: absolute;
+    top: 100%; /* Positionne le haut du bouton au bas de la carte */
+    left: 0; /* Aligné à gauche de la carte */
+    width: 130px; /* Largeur fixe */
+    height: 70px; /* Hauteur fixe */
+    background-color: var(--white);
+    color: var(--black);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    gap: 8px; /* Espace entre le texte et l'icône */
+}
+
+.reservation-button-card .arrow-icon {
+    stroke: var(--black);
+    transition: transform 0.3s ease;
+}
+
+.reservation-button-card:hover {
+    background-color: var(--grey-light);
+}
+
+.reservation-button-card:hover .arrow-icon {
+    transform: translate(3px, -3px);
+}
+
 .section1 .middle-card p {
     margin: 0;
     font-size: 1.0rem;
@@ -801,6 +833,13 @@
         </div>
         <div class="middle-card">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a mauris leo. Sed a odio metus. Integer in risus sit amet est vehicula accumsan. Nullam dignissim pellentesque erat vitae tincidunt. Aenean tincidunt pretium placerat. Proin porta blandit libero, in mollis felis pulvinar et. Morbi in volutpat sapien, vitae pellentesque nunc. Suspendisse finibus, tellus ac ultrices ullamcorper, nisi urna molestie odio, eget viverra nisi massa sit amet nibh. Donec nibh arcu.</p>
+            <a href="#" class="reservation-button-card">
+                Réservation
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="arrow-icon">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+            </a>
         </div>
         <div class="right">
             <img src="/static/assets/images/fleurs-et-pierres-aux-bougies-floues.jpg" alt="Massage-image" width="40"
