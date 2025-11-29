@@ -687,6 +687,7 @@
     height: 100vh;
     overflow: hidden;
     padding: 0 !important; /* ✅ désactive le padding global */
+    align-items: stretch;
 }
 
 .section1 .left {
@@ -728,6 +729,29 @@
     max-width: 450px;
     text-align: left;
     z-index: 10;
+}
+
+.reservation-button-card {
+    position: absolute;
+    top: 100%; /* Positionne le haut du bouton au bas de la carte */
+    left: 0; /* Aligné à gauche de la carte */
+    margin-top: 10px; /* Ajoute un petit espace entre la carte et le bouton */
+    width: 70px; /* Largeur fixe pour un carré */
+    height: 70px; /* Hauteur fixe pour un carré */
+    background-color: var(--pink-dark);
+    color: var(--white);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease;
+}
+
+.reservation-button-card:hover {
+    background-color: var(--pink-darker);
 }
 
 .section1 .middle-card p {
@@ -801,6 +825,7 @@
         </div>
         <div class="middle-card">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a mauris leo. Sed a odio metus. Integer in risus sit amet est vehicula accumsan. Nullam dignissim pellentesque erat vitae tincidunt. Aenean tincidunt pretium placerat. Proin porta blandit libero, in mollis felis pulvinar et. Morbi in volutpat sapien, vitae pellentesque nunc. Suspendisse finibus, tellus ac ultrices ullamcorper, nisi urna molestie odio, eget viverra nisi massa sit amet nibh. Donec nibh arcu.</p>
+            <a href="#" class="reservation-button-card">Réservation</a>
         </div>
         <div class="right">
             <img src="/static/assets/images/fleurs-et-pierres-aux-bougies-floues.jpg" alt="Massage-image" width="40"
