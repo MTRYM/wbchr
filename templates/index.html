@@ -325,87 +325,6 @@
             color: var(--white);
         }
 
-        .features-section {
-            padding: 6rem 2rem;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 3rem;
-            align-items: center;
-            justify-content: space-between;
-            flex-direction: row;
-        }
-
-        .features-text {
-            flex: 1 1 500px;
-            max-width: 600px;
-            margin-left: 120px;
-        }
-
-        .features-text h2 {
-            font-size: 52px;
-            color: var(--blue-dark);
-            font-family: "Fraunces", serif;
-            margin-bottom: 1.5rem;
-            text-align: left;
-            line-height: 62.4px;
-        }
-
-        .features-text p {
-            font-size: 1.125rem;
-            line-height: 1.8;
-            margin-bottom: 2rem;
-            color: var(--dark);
-        }
-
-        .features-text ul {
-            padding-left: 1rem;
-            margin-bottom: 2.5rem;
-        }
-
-        .features-text ul li {
-            margin-bottom: 0.75rem;
-            font-size: 1rem;
-            list-style: "✓ ";
-            color: var(--black);
-        }
-
-        .features-carousel {
-            flex: 1 1 400px;
-            background-color: var(--blue-dark);
-            border-radius: 16px;
-            padding: 1rem;
-            position: relative;
-            height: 400px;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 120px;
-        }
-
-        .features-frame {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            font-weight: bold;
-            color: var(--blue-light);
-            background-color: rgba(255, 255, 255, 0.05);
-            border: 2px dashed var(--blue-light);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            opacity: 0;
-            transition: opacity 1s ease;
-        }
-
-        .features-frame.visible {
-            opacity: 1;
-        }
-
         .btn-large {
             background: var(--blue-mid);
             color: var(--white);
@@ -772,6 +691,126 @@
     color: #fff;
 }
 
+/* --- Section 2: Process Section --- */
+.process-section {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 6rem 5%;
+    display: flex;
+    flex-direction: column; /* Changed to column */
+    align-items: center;
+    gap: 0; /* Removed gap */
+    min-height: auto;
+    background-color: var(--white);
+    position: relative;
+}
+
+.process-section-main-content {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: flex-start;
+    gap: 4rem;
+}
+
+.process-section .text-content {
+    flex: 1 1 55%;
+    align-self: flex-start;
+}
+
+.process-section .image-content {
+    flex: 1 1 45%;
+}
+
+.process-section .image-content img {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.process-section .intro-text {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--dark);
+    margin-bottom: 1rem;
+}
+
+.process-section h2 {
+    font-family: 'Galient', sans-serif;
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    color: var(--black);
+    text-align: left;
+}
+
+.process-section .description {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--dark);
+    max-width: 60%;
+    margin-bottom: 3.5rem;
+}
+
+.steps-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1.5rem;
+    width: 100%;
+    padding: 0 5%; /* Match section padding */
+    margin-top: -60px; /* Pull the cards up */
+    position: relative;
+    z-index: 2;
+}
+
+.step-card {
+    background-color: var(--beige);
+    padding: 2rem;
+    flex: 1;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.step-label {
+    background-color: var(--dark--green);
+    color: var(--white);
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.5rem 0.8rem;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+    align-self: flex-start; /* Makes the label only as wide as its content */
+}
+
+.step-card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.step-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--dark);
+    flex-grow: 1; /* Pushes the link to the bottom */
+}
+
+.step-link {
+    font-weight: 600;
+    color: var(--black);
+    text-decoration: none;
+    margin-top: 1.5rem;
+    align-self: flex-start;
+}
+
+.overlap-card {
+    top: -60px; /* Adjust this value to control the amount of overlap */
+    margin-bottom: -60px; /* Add margin to compensate for the negative top */
+}
+
 
     </style>
     <script type="application/ld+json">
@@ -849,34 +888,42 @@
         </div>
     </section>
 
-    <section id="section2" class="features-section">
-        <div class="features-text">
-            <h2>Section 2 Title (e.g., Features)</h2>
-            <p>
-                Describe your product or service in more detail here. Explain what makes it special and why it's the
-                right choice for the user.
-            </p>
-            <ul>
-                <li>Feature number one</li>
-                <li>Feature number two</li>
-                <li>Another great feature</li>
-                <li>Professional quality and support</li>
-                <li>Easy to use and set up</li>
-            </ul>
-            <button class="btn-large arrow-button">
-                Another Call to Action
-                <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"
-                    fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                    <polyline points="12 5 19 12 12 19"></polyline>
-                </svg>
-            </button>
+    <section id="section2" class="process-section">
+        <div class="process-section-main-content">
+            <div class="text-content">
+                <p class="intro-text">Notre approche</p>
+                <h2>Un parcours<br>vers la sérénité</h2>
+                <p class="description">Nous avons conçu un processus en quatre étapes simples pour vous garantir une expérience fluide, de la réservation à la relaxation la plus totale.</p>
+            </div>
+            <div class="image-content">
+                <img src="/static/assets/images/fleurs-et-pierres-aux-bougies-floues.jpg" alt="Processus de relaxation">
+            </div>
         </div>
-
-        <div class="features-carousel">
-            <div class="features-frame visible">Example 1</div>
-            <div class="features-frame">Example 2</div>
-            <div class="features-frame">Example 3</div>
+        <div class="steps-grid">
+            <div class="step-card">
+                <div class="step-label">Étape 1</div>
+                <h3>Découverte</h3>
+                <p>Explorez nos services et trouvez le soin qui vous correspond parfaitement.</p>
+                <a href="#" class="step-link">Réservation &rarr;</a>
+            </div>
+            <div class="step-card">
+                <div class="step-label">Étape 2</div>
+                <h3>Réservation</h3>
+                <p>Choisissez votre date et heure en quelques clics via notre plateforme sécurisée.</p>
+                <a href="#" class="step-link">Réservation &rarr;</a>
+            </div>
+            <div class="step-card">
+                <div class="step-label">Étape 3</div>
+                <h3>Préparation</h3>
+                <p>Recevez nos conseils pour préparer votre corps et votre esprit à une relaxation optimale.</p>
+                <a href="#" class="step-link">Réservation &rarr;</a>
+            </div>
+            <div class="step-card">
+                <div class="step-label">Étape 4</div>
+                <h3>Relaxation</h3>
+                <p>Profitez d'une expérience inoubliable entre les mains expertes de nos praticiens.</p>
+                <a href="#" class="step-link">Réservation &rarr;</a>
+            </div>
         </div>
     </section>
 
