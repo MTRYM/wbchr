@@ -308,7 +308,6 @@
 
 
         .section1 {
-            text-align: center;
             padding: 0px;
             color: var(--black);
             background-color: var(--green);
@@ -687,6 +686,7 @@
     height: 100vh;
     overflow: hidden;
     padding: 0 !important; /* ✅ désactive le padding global */
+    align-items: stretch;
 }
 
 .section1 .left {
@@ -703,6 +703,8 @@
     margin: 0;
     font-size: 2.5rem;
     font-family: 'Galient', sans-serif;
+    color: var(--white);
+    text-align: left;
 }
 
 .section1 .right {
@@ -734,8 +736,8 @@
     position: absolute;
     top: 100%; /* Positionne le haut du bouton au bas de la carte */
     left: 0; /* Aligné à gauche de la carte */
-    width: 130px; /* Largeur fixe */
-    height: 70px; /* Hauteur fixe */
+    width: 200px; /* Largeur fixe */
+    height: 60px; /* Hauteur fixe */
     background-color: var(--white);
     color: var(--black);
     text-decoration: none;
