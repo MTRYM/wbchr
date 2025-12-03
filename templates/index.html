@@ -837,6 +837,155 @@
         #section2 .step-card a .arrow-icon:hover {
             transform: translate(3px, -3px);
         }
+
+#section3 {
+    background-color: var(--green);
+    color: var(--white);
+    padding: 6rem 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 3rem;
+    min-height: 100vh;
+}
+
+.section3-left-text {
+    width: 100%;
+    text-align: left;
+    max-width: 400px;
+}
+
+.section3-left-text h2 {
+    font-family: 'Galient', sans-serif;
+    font-size: 3.5rem;
+    text-align: left;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: var(--white);
+}
+
+.section3-left-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--white);
+    opacity: 0.9;
+}
+
+.section3-main-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 2rem;
+}
+
+.section3-items-left,
+.section3-items-right {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 25%;
+}
+
+.service-item {
+    text-align: center;
+}
+
+.section3-items-left .service-item {
+    text-align: right;
+}
+
+.section3-items-right .service-item {
+    text-align: left;
+}
+
+
+.service-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+}
+
+.service-item h3 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.service-item p {
+    font-size: 1rem;
+    line-height: 1.5;
+    opacity: 0.8;
+}
+
+.section3-center-image {
+    position: relative;
+    width: 350px;
+    height: 500px;
+    flex-shrink: 0;
+}
+
+.section3-center-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.reservation-button {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background-color: var(--white);
+    color: var(--black);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.reservation-button:hover {
+    background-color: var(--grey-light);
+}
+
+@media (max-width: 992px) {
+    #section3 {
+        align-items: center;
+        text-align: center;
+    }
+
+    .section3-left-text {
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .section3-left-text h2 {
+        text-align: center;
+    }
+
+    .section3-main-content {
+        flex-direction: column;
+    }
+
+    .section3-items-left,
+    .section3-items-right {
+        width: 100%;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .section3-items-left .service-item,
+    .section3-items-right .service-item {
+        text-align: center;
+    }
+}
     </style>
     <script type="application/ld+json">
     {
@@ -998,25 +1147,38 @@
     </section>
 
     <section id="section3">
-        <h2>Section 3 Title (e.g., Gallery)</h2>
-        <div class="gallery-row">
-            <div class="gallery-track">
-                <div class="gallery-item">Image</div>
-                <div class="gallery-item">Image</div>
-                <div class="gallery-item">Image</div>
-                <div class="gallery-item">Image</div>
-                <div class="gallery-item">Image</div>
-                <div class="gallery-item">Image</div>
-            </div>
+        <div class="section3-left-text">
+            <h2>Découvrez Nos Rituels Exclusifs</h2>
+            <p>Une immersion dans un monde de sérénité où chaque soin est une invitation au voyage sensoriel.</p>
         </div>
-        <div class="gallery-row">
-            <div class="gallery-track reverse">
-                <div class="gallery-item">Image</div>
-                <div class="gallery-item">Image</div>
-                <div class="gallery-item">Image</div>
-                <div class="gallery-item">Image</div>
-                <div class="gallery-item">Image</div>
-                <div class="gallery-item">Image</div>
+        <div class="section3-main-content">
+            <div class="section3-items-left">
+                <div class="service-item">
+                    <img src="/static/assets/icons/lotus.png" alt="Icone Lotus" class="service-icon">
+                    <h3>Soins Visage d'Exception</h3>
+                    <p>Des protocoles sur-mesure pour révéler l'éclat de votre peau.</p>
+                </div>
+                <div class="service-item">
+                    <img src="/static/assets/icons/treatment.png" alt="Icone Traitement" class="service-icon">
+                    <h3>Massages Holistiques</h3>
+                    <p>Lâcher-prise total avec nos techniques de massage ancestrales.</p>
+                </div>
+            </div>
+            <div class="section3-center-image">
+                <img src="/static/assets/images/produits-de-spa-aux-orchidees.jpg" alt="Image centrale des rituels de spa">
+                <a href="#" class="reservation-button">Réservation</a>
+            </div>
+            <div class="section3-items-right">
+                <div class="service-item">
+                    <img src="/static/assets/icons/stones.png" alt="Icone Pierres" class="service-icon">
+                    <h3>Rituels Corps Précieux</h3>
+                    <p>Gommages, enveloppements et bains pour une peau douce et satinée.</p>
+                </div>
+                <div class="service-item">
+                    <img src="/static/assets/icons/bamboo.png" alt="Icone Bambou" class="service-icon">
+                    <h3>Escapades Bien-Être</h3>
+                    <p>Des forfaits complets pour une journée de pure détente.</p>
+                </div>
             </div>
         </div>
     </section>
