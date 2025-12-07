@@ -1408,12 +1408,15 @@ position: absolute;
                 });
             }, { threshold: 0.2 });
 
-            const importantElements = document.querySelectorAll(
+            const elementsToAnimate = document.querySelectorAll(
                 "h1, h2, .btn-primary, .btn-large, .contact-btn, .testimonial-card, .hero p.lead"
             );
-
-            importantElements.forEach((el) => {
+            elementsToAnimate.forEach((el) => {
                 el.classList.add("reveal");
+            });
+
+            const allRevealElements = document.querySelectorAll('.reveal');
+            allRevealElements.forEach((el) => {
                 observer.observe(el);
             });
 
