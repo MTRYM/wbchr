@@ -989,6 +989,157 @@ position: absolute;
         text-align: center;
     }
 }
+
+@media (max-width: 992px) {
+    .section4-main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section4-left {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .navigation-arrows {
+        bottom: -4rem;
+    }
+}
+
+#section4 {
+    background-color: var(--beige, #F5F5DC);
+    padding: 6rem 8%;
+    min-height: auto;
+}
+
+.section4-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section4-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section4-header h2 {
+    font-family: 'Galient', sans-serif;
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: var(--black);
+}
+
+.section4-header p {
+    font-size: 1.125rem;
+    color: var(--black);
+    opacity: 0.7;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.section4-main {
+    display: flex;
+    gap: 4rem;
+    align-items: flex-start;
+}
+
+.section4-left {
+    flex: 1;
+    max-width: 320px;
+}
+
+.item-number {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--black);
+    opacity: 0.5;
+    margin-bottom: 1.5rem;
+}
+
+.section4-left h3 {
+    font-family: 'Galient', sans-serif;
+    font-size: 2.25rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    color: var(--black);
+}
+
+.section4-left p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    color: var(--black);
+    opacity: 0.8;
+}
+
+.reservation-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #d3c1b3;
+    color: var(--black);
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.reservation-link:hover {
+    background-color: #c1b0a2;
+}
+
+.reservation-link .arrow-icon {
+    transition: transform 0.3s ease;
+}
+
+.reservation-link:hover .arrow-icon {
+    transform: translateX(3px);
+}
+
+.section4-right {
+    flex: 1.5;
+    position: relative;
+}
+
+.section4-right img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.navigation-arrows {
+    position: absolute;
+    bottom: -2rem;
+    right: 50%;
+    transform: translateX(50%);
+    display: flex;
+    gap: 1rem;
+}
+
+.arrow-btn {
+    background-color: var(--white);
+    border: 1px solid var(--grey-dark);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.arrow-btn:hover {
+    background-color: var(--grey-light);
+    border-color: var(--black);
+}
+
+.arrow-btn svg {
+    width: 20px;
+    height: 20px;
+    stroke: var(--black);
+}
     </style>
     <script type="application/ld+json">
     {
@@ -1193,8 +1344,42 @@ position: absolute;
         </div>
     </section>
 
-    <section id="section4" class="contact-section">
-        <h2>Section 4 Title (e.g., Contact Us)</h2>
+    <section id="section4">
+        <div class="section4-container">
+            <div class="section4-header reveal">
+                <h2>Exclusive Benefits of Our<br>Private Massage Service</h2>
+                <p>Escape the Ordinary, Indulge in Ultimate Relaxation, Anytime, Anywhere.</p>
+            </div>
+            <div class="section4-main">
+                <div class="section4-left reveal">
+                    <div class="item-number">01</div>
+                    <h3>No Travel Hassle – Pure Relaxation</h3>
+                    <p>Forget about commuting through the city or waiting in a salon. Our professional therapists arrive at your location, allowing you to fully relax before, during, and after your massage.</p>
+                    <a href="#" class="reservation-link">
+                        Réservation
+                        <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="7" y1="17" x2="17" y2="7"></line>
+                            <polyline points="7 7 17 7 17 17"></polyline>
+                        </svg>
+                    </a>
+                </div>
+                <div class="section4-right reveal">
+                    <img src="../static/assets/images/woman-getting-massage.png" alt="Woman receiving a relaxing massage">
+                    <div class="navigation-arrows">
+                        <button class="arrow-btn left-arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                        </button>
+                        <button class="arrow-btn right-arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact-section" class="contact-section">
+        <h2>Contact Us</h2>
         <div class="contact-buttons">
             <a href="mailto:your-email@example.com" class="contact-btn">your-email@example.com</a>
             <a href="tel:+1234567890" class="contact-btn">+1 (234) 567-890</a>
