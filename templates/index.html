@@ -1007,13 +1007,12 @@ position: absolute;
 }
 
 #section4 {
-    background-color: var(--beige, #F5F5DC);
+    background-color: var(--white);
     padding: 6rem 8%;
     min-height: auto;
 }
 
 .section4-container {
-    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -1028,6 +1027,7 @@ position: absolute;
     line-height: 1.2;
     margin-bottom: 1rem;
     color: var(--black);
+    letter-spacing: 0.02rem;
 }
 
 .section4-header p {
@@ -1040,7 +1040,7 @@ position: absolute;
 
 .section4-main {
     display: flex;
-    gap: 4rem;
+    gap: 9rem;
     align-items: flex-start;
 }
 
@@ -1050,19 +1050,20 @@ position: absolute;
 }
 
 .item-number {
-    font-size: 1rem;
+    font-size: .95rem;
     font-weight: 600;
     color: var(--black);
     opacity: 0.5;
-    margin-bottom: 1.5rem;
+    margin-bottom: 8rem;
 }
 
 .section4-left h3 {
-    font-family: 'Galient', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 2.25rem;
     line-height: 1.2;
     margin-bottom: 1.5rem;
     color: var(--black);
+    font-weight: 550;
 }
 
 .section4-left p {
@@ -1074,19 +1075,19 @@ position: absolute;
 }
 
 .reservation-link {
-    display: inline-flex;
+display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.75rem 1.5rem;
-    background-color: #d3c1b3;
-    color: var(--black);
+    padding: 1.15rem 2.25rem;
+    background-color: var(--green);
+    color: var(--white);
     text-decoration: none;
     font-weight: 600;
     transition: background-color 0.3s ease;
 }
 
 .reservation-link:hover {
-    background-color: #c1b0a2;
+    background-color: var(--dark--green);
 }
 
 .reservation-link .arrow-icon {
@@ -1094,7 +1095,7 @@ position: absolute;
 }
 
 .reservation-link:hover .arrow-icon {
-    transform: translateX(3px);
+    transform: translate(3px, -3px);
 }
 
 .section4-right {
@@ -1103,7 +1104,7 @@ position: absolute;
 }
 
 .section4-right img {
-    width: 100%;
+    width: 850px;
     height: auto;
     display: block;
 }
@@ -1364,7 +1365,7 @@ position: absolute;
                     </a>
                 </div>
                 <div class="section4-right reveal">
-                    <img src="../static/assets/images/woman-getting-massage.png" alt="Woman receiving a relaxing massage">
+                    <img src="../static/assets/images/bel-arrangement-avec-des-pierres-de-spa-et-des-bougies.jpg" alt="Woman receiving a relaxing massage">
                     <div class="navigation-arrows">
                         <button class="arrow-btn left-arrow">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
@@ -1408,12 +1409,15 @@ position: absolute;
                 });
             }, { threshold: 0.2 });
 
-            const importantElements = document.querySelectorAll(
+            const elementsToAnimate = document.querySelectorAll(
                 "h1, h2, .btn-primary, .btn-large, .contact-btn, .testimonial-card, .hero p.lead"
             );
-
-            importantElements.forEach((el) => {
+            elementsToAnimate.forEach((el) => {
                 el.classList.add("reveal");
+            });
+
+            const allRevealElements = document.querySelectorAll('.reveal');
+            allRevealElements.forEach((el) => {
                 observer.observe(el);
             });
 
