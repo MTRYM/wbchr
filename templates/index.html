@@ -1141,6 +1141,62 @@ display: inline-flex;
     height: 20px;
     stroke: var(--black);
 }
+
+#section5 {
+    display: flex;
+    flex-direction: row;
+    min-height: 70vh;
+    padding: 0 !important;
+    background-color: var(--dark--green);
+    color: var(--white);
+    align-items: stretch;
+}
+
+.section5-left {
+    width: 50%;
+}
+
+.section5-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.section5-right {
+    width: 50%;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section5-right h2 {
+    font-family: 'Galient', sans-serif;
+    font-size: 2.5rem;
+    text-align: left;
+    margin-bottom: 2rem;
+    color: var(--white);
+}
+
+.section5-right p {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.testimonial-author {
+    margin-bottom: 2rem;
+}
+
+.testimonial-author p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.testimonial-navigation {
+    display: flex;
+    gap: 1rem;
+}
     </style>
     <script type="application/ld+json">
     {
@@ -1375,6 +1431,28 @@ display: inline-flex;
                         </button>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="section5">
+        <div class="section5-left">
+            <img src="../static/assets/images/section5-image.png" alt="Customer Testimonial">
+        </div>
+        <div class="section5-right">
+            <h2>Customer Testimonials – What Our Clients Say</h2>
+            <p>"Escape's at-home massage service is a game-changer. The therapist was incredibly skilled, professional, and created a spa-like atmosphere right in my hotel room. I felt completely refreshed and renewed."</p>
+            <div class="testimonial-author">
+                <p><strong>David K.</strong></p>
+                <p>Business Traveler</p>
+            </div>
+            <div class="testimonial-navigation">
+                <button class="arrow-btn left-arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                </button>
+                <button class="arrow-btn right-arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </button>
             </div>
         </div>
     </section>
