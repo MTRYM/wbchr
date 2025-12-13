@@ -261,18 +261,6 @@
             transform: translateY(0);
         }
 
-        footer {
-            background: var(--grey);
-            padding: 2rem;
-            text-align: center;
-        }
-
-        footer a {
-            color: var(--blue-dark);
-            text-decoration: none;
-            font-weight: 600;
-        }
-
         .gallery-row {
             display: flex;
             overflow: hidden;
@@ -472,10 +460,6 @@
         }
 
         .contact-section {
-            background-color: var(--beige);
-        }
-
-        footer {
             background-color: var(--beige);
         }
 
@@ -1202,6 +1186,119 @@ display: inline-flex;
     display: flex;
     gap: 1rem;
 }
+
+footer {
+    background-color: var(--white);
+    padding: 7rem 0rem 3rem 0rem;
+    color: var(--black);
+    text-align: left;
+    font-family: 'Inter', sans-serif;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 2rem;
+    flex-direction: column;
+}
+
+.footer-logo-text {
+    font-family: 'Galient', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: 16px;
+}
+
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.contact-item img {
+    width: 18px;
+    height: auto;
+}
+
+.contact-item p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.footer-main {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem 0;
+    border-top: 1px solid var(--grey);
+    border-bottom: 1px solid var(--grey);
+}
+
+.footer-links {
+    display: flex;
+    gap: 18rem;
+    text-align: center;
+}
+
+.link-column h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.15rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.link-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.link-column a {
+    text-decoration: none;
+    color: var(--black);
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.footer-newsletter {
+    max-width: 350px;
+}
+
+.footer-newsletter h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.footer-newsletter p {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.footer-bottom {
+    padding-top: 1rem;
+    text-align: center;
+    font-size: 0.8rem;
+}
     </style>
     <script type="application/ld+json">
     {
@@ -1441,7 +1538,7 @@ display: inline-flex;
 
     <section id="section5">
         <div class="section5-left">
-            <img src="../static/assets/images/Capture d'écran 2025-12-09 210117.png" alt="Customer Testimonial">
+            <img src="../static/assets/images/Capture d'écran 2025-12-09 210117.png" alt="Customer Testimonial Image">
         </div>
         <div class="section5-right">
             <h2>Customer Testimonials – What Our Clients Say</h2>
@@ -1457,23 +1554,59 @@ display: inline-flex;
         </div>
     </section>
 
-    <section id="contact-section" class="contact-section">
-        <h2>Contact Us</h2>
-        <div class="contact-buttons">
-            <a href="mailto:your-email@example.com" class="contact-btn">your-email@example.com</a>
-            <a href="tel:+1234567890" class="contact-btn">+1 (234) 567-890</a>
-        </div>
-        <div class="section-divider"></div>
-        <div class="social-buttons">
-            <a href="#" class="social-btn">Social 1</a>
-            <a href="#" class="social-btn">Social 2</a>
-            <a href="#" class="social-btn">Social 3</a>
-        </div>
-        <div class="section-divider"></div>
-    </section>
-
     <footer>
-        &copy; 2025 Your Company Name. All rights reserved. <a href="#">Legal Notice</a>
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <div class="footer-logo-text">Your Logo</div>
+                </div>
+                <div class="footer-contact">
+                    <div class="contact-item">
+                        <img src="../static/assets/icons/espace-reserve.png" alt="Location icon">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    <div class="contact-item">
+                        <img src="../static/assets/icons/appel.png" alt="Phone icon">
+                        <p>+33 0 00 00 00 00</p>
+                    </div>
+                    <div class="contact-item">
+                        <img src="../static/assets/icons/courrier.png" alt="Email icon">
+                        <p>lorem@ipsum.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-main">
+                <div class="footer-links">
+                    <div class="link-column">
+                        <h3>Service</h3>
+                        <a href="#">Lorem</a>
+                        <a href="#">Lorem Ipsum</a>
+                        <a href="#">Pricelist</a>
+                        <a href="#">Lorem Ipsum</a>
+                        <a href="#">Lorem</a>
+                    </div>
+                    <div class="link-column">
+                        <h3>Service</h3>
+                        <a href="#">Lorem</a>
+                        <a href="#">Lorem Ipsum</a>
+                        <a href="#">Pricelist</a>
+                        <a href="#">Lorem Ipsum</a>
+                        <a href="#">Lorem</a>
+                    </div>
+                    <div class="link-column">
+                        <h3>Service</h3>
+                        <a href="#">Lorem</a>
+                        <a href="#">Lorem Ipsum</a>
+                        <a href="#">Pricelist</a>
+                        <a href="#">Lorem Ipsum</a>
+                        <a href="#">Lorem</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; Copyright 2025 Nom de l'entreprise</p>
+            </div>
+        </div>
     </footer>
 
     <script>
