@@ -150,7 +150,12 @@
             padding: 180px 0px 0px 0px;
             text-align: center;
             position: relative;
-            overflow: hidden;
+            z-index: 20;
+        }
+
+        .hero-content {
+            position: relative;
+            padding-bottom: 60px;
         }
 
         .hero h1 {
@@ -207,6 +212,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            margin-top: -30px;
         }
 
         .showcase-image img {
@@ -234,6 +240,11 @@
             font-weight: 600;
             cursor: pointer;
             transition: transform 0.1s ease;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, 50%);
+            z-index: 10;
         }
 
         .image-placeholder {
@@ -346,6 +357,10 @@
 
         .arrow-button:hover .arrow-icon {
             transform: translateX(5px);
+        }
+
+        .arrow-hover-effect:hover .arrow-icon {
+            transform: translate(3px, -3px);
         }
 
         .contact-section {
@@ -1341,7 +1356,7 @@ footer {
         </a>
 
         <div class="header-contact">
-            <a href="mailto:contact@yourwebsite.com" class="contact-btn-header">Reservation
+            <a href="mailto:contact@yourwebsite.com" class="contact-btn-header arrow-hover-effect">Reservation
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
                     class="arrow-icon">
@@ -1353,16 +1368,18 @@ footer {
     </header>
 
     <section class="hero">
-        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
-        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin.</p>
-        <button class="btn-primary">Reservation</button>
+        <div class="hero-content">
+            <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
+            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin.</p>
+            <button class="btn-primary">Reservation</button>
+        </div>
 
         <div class="showcase-image">
-            <img src="../static/assets/images/produits-de-spa-aux-orchidees.jpg" alt="Showcase Image">
-            <img src="../static/assets/images/produits-de-spa-aux-orchidees.jpg" alt="Showcase Image">
-            <img src="../static/assets/images/produits-de-spa-aux-orchidees.jpg" alt="Showcase Image">
-            <img src="../static/assets/images/produits-de-spa-aux-orchidees.jpg" alt="Showcase Image">
-            <img src="../static/assets/images/produits-de-spa-aux-orchidees.jpg" alt="Showcase Image">
+            <img src="/static/assets/images/produits-de-spa-aux-orchidees.jpg" alt="Showcase Image">
+            <img src="/static/assets/images/produits-de-spa-aux-orchidees.jpg" alt="Showcase Image">
+            <img src="/static/assets/images/produits-de-spa-aux-orchidees.jpg" alt="Showcase Image">
+            <img src="/static/assets/images/produits-de-spa-aux-orchidees.jpg" alt="Showcase Image">
+            <img src="/static/assets/images/produits-de-spa-aux-orchidees.jpg" alt="Showcase Image">
         </div>
     </section>
 
@@ -1376,7 +1393,7 @@ footer {
                 tincidunt pretium placerat. Proin porta blandit libero, in mollis felis pulvinar et. Morbi in volutpat
                 sapien, vitae pellentesque nunc. Suspendisse finibus, tellus ac ultrices ullamcorper, nisi urna molestie
                 odio, eget viverra nisi massa sit amet nibh. Donec nibh arcu.</p>
-            <a href="#" class="reservation-button-card">
+            <a href="#" class="reservation-button-card arrow-hover-effect">
                 Réservation
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
@@ -1387,7 +1404,7 @@ footer {
             </a>
         </div>
         <div class="right">
-            <img src="../static/assets/images/fleurs-et-pierres-aux-bougies-floues.jpg" alt="Massage-image" width="40"
+            <img src="/static/assets/images/fleurs-et-pierres-aux-bougies-floues.jpg" alt="Massage-image" width="40"
                 height="40">
         </div>
     </section>
@@ -1403,7 +1420,7 @@ footer {
                     </p>
                 </div>
                 <div class="image-content">
-                    <img src="../static/assets/images/fleurs-et-pierres-aux-bougies-floues.jpg"
+                    <img src="/static/assets/images/fleurs-et-pierres-aux-bougies-floues.jpg"
                         alt="Massage therapy session">
                 </div>
             </div>
@@ -1413,7 +1430,7 @@ footer {
                     <h3>Consultation</h3>
                     <p>Nous commençons par une consultation approfondie pour comprendre vos besoins et vos préférences.
                     </p>
-                    <a href="#">Réservation <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                    <a href="#" class="arrow-hover-effect">Réservation <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
                             stroke-linecap="round" stroke-linejoin="round" class="arrow-icon">
                             <line x1="7" y1="17" x2="17" y2="7"></line>
@@ -1425,7 +1442,7 @@ footer {
                     <h3>Personnalisation</h3>
                     <p>Chaque séance est personnalisée en utilisant une variété de techniques pour répondre à vos
                         besoins spécifiques.</p>
-                    <a href="#">Réservation <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                    <a href="#" class="arrow-hover-effect">Réservation <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
                             stroke-linecap="round" stroke-linejoin="round" class="arrow-icon">
                             <line x1="7" y1="17" x2="17" y2="7"></line>
@@ -1436,7 +1453,7 @@ footer {
                     <div class="step-label">Step 3</div>
                     <h3>Relaxation</h3>
                     <p>Profitez d'une atmosphère apaisante conçue pour améliorer votre expérience de relaxation.</p>
-                    <a href="#">Réservation <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                    <a href="#" class="arrow-hover-effect">Réservation <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
                             stroke-linecap="round" stroke-linejoin="round" class="arrow-icon">
                             <line x1="7" y1="17" x2="17" y2="7"></line>
@@ -1447,7 +1464,7 @@ footer {
                     <div class="step-label">Step 4</div>
                     <h3>Recommandations</h3>
                     <p>Recevez des conseils sur la manière de maintenir votre bien-être après votre séance.</p>
-                    <a href="#">Réservation <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                    <a href="#" class="arrow-hover-effect">Réservation <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
                             stroke-linecap="round" stroke-linejoin="round" class="arrow-icon">
                             <line x1="7" y1="17" x2="17" y2="7"></line>
@@ -1478,7 +1495,7 @@ footer {
             </div>
             <div class="section3-center-image">
                 <img src="/static/assets/images/produits-de-spa-aux-orchidees.jpg" alt="Image centrale des rituels de spa">
-                <a href="#" class="reservation-button">Réservation
+                <a href="#" class="reservation-button arrow-hover-effect">Réservation
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
                     class="arrow-icon">
@@ -1513,7 +1530,7 @@ footer {
                     <div class="item-number">01</div>
                     <h3>No Travel Hassle – Pure Relaxation</h3>
                     <p>Forget about commuting through the city or waiting in a salon. Our professional therapists arrive at your location, allowing you to fully relax before, during, and after your massage.</p>
-                    <a href="#" class="reservation-link">
+                    <a href="#" class="reservation-link arrow-hover-effect">
                         Réservation
                         <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <line x1="7" y1="17" x2="17" y2="7"></line>
@@ -1522,7 +1539,7 @@ footer {
                     </a>
                 </div>
                 <div class="section4-right reveal">
-                    <img src="../static/assets/images/bel-arrangement-avec-des-pierres-de-spa-et-des-bougies.jpg" alt="Woman receiving a relaxing massage">
+                    <img src="/static/assets/images/bel-arrangement-avec-des-pierres-de-spa-et-des-bougies.jpg" alt="Woman receiving a relaxing massage">
                     <div class="navigation-arrows">
                         <button class="arrow-btn left-arrow">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
@@ -1538,7 +1555,7 @@ footer {
 
     <section id="section5">
         <div class="section5-left">
-            <img src="../static/assets/images/Capture d'écran 2025-12-09 210117.png" alt="Customer Testimonial Image">
+            <img src="/static/assets/images/Capture d'écran 2025-12-09 210117.png" alt="Customer Testimonial Image">
         </div>
         <div class="section5-right">
             <h2>Customer Testimonials – What Our Clients Say</h2>
@@ -1562,15 +1579,15 @@ footer {
                 </div>
                 <div class="footer-contact">
                     <div class="contact-item">
-                        <img src="../static/assets/icons/espace-reserve.png" alt="Location icon">
+                        <img src="/static/assets/icons/espace-reserve.png" alt="Location icon">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     </div>
                     <div class="contact-item">
-                        <img src="../static/assets/icons/appel.png" alt="Phone icon">
+                        <img src="/static/assets/icons/appel.png" alt="Phone icon">
                         <p>+33 0 00 00 00 00</p>
                     </div>
                     <div class="contact-item">
-                        <img src="../static/assets/icons/courrier.png" alt="Email icon">
+                        <img src="/static/assets/icons/courrier.png" alt="Email icon">
                         <p>lorem@ipsum.com</p>
                     </div>
                 </div>
