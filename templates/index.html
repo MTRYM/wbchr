@@ -1339,6 +1339,225 @@
             text-align: center;
             font-size: 0.8rem;
         }
+
+        @media (max-width: 1200px) {
+            .section4-main {
+                gap: 4rem;
+            }
+            .section4-right img {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 4rem;
+            }
+
+            h2 {
+                font-size: 3rem;
+            }
+
+            section {
+                padding: 5rem 1.5rem;
+            }
+
+            .hero h1 {
+                font-size: 5rem;
+            }
+
+            #section2 .section2-top {
+                flex-direction: column;
+            }
+
+            #section2 .steps-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-links {
+                gap: 4rem;
+            }
+        }
+
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            section {
+                padding: 4rem 1rem;
+            }
+
+            .hero h1 {
+                font-size: 3.5rem;
+            }
+
+            .showcase-image {
+                flex-wrap: wrap;
+            }
+            .showcase-image img {
+                width: 50%;
+            }
+
+            .section1 {
+                flex-direction: column;
+                height: auto;
+            }
+
+            .section1 .left, .section1 .right {
+                width: 100%;
+            }
+
+            .section1 .left {
+                min-height: 50vh;
+                justify-content: center;
+            }
+            
+            .section1 .middle-card {
+                position: relative;
+                width: 90%;
+                left: 50%;
+                top: 0;
+                transform: translate(-50%, -20%);
+            }
+
+            #section2 .steps-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section3-main-content {
+                flex-direction: column;
+            }
+
+            .section3-items-left, .section3-items-right, .section3-center-image {
+                width: 100%;
+            }
+
+            .section3-center-image {
+                order: -1;
+            }
+
+            .section4-main {
+                flex-direction: column;
+                align-items: center;
+                gap: 2rem;
+            }
+            .section4-left {
+                max-width: 100%;
+                text-align: center;
+            }
+
+            #section5 {
+                flex-direction: column;
+            }
+
+            .section5-left, .section5-right {
+                width: 100%;
+            }
+
+            .footer-main {
+                flex-direction: column;
+                align-items: center;
+            }
+            .footer-links {
+                flex-direction: column;
+                gap: 2rem;
+                text-align: center;
+            }
+
+            header {
+                padding: 1rem 1.5rem;
+            }
+
+            .section1 .left h2 {
+                font-size: 3rem;
+                max-width: none;
+                text-align: center;
+                margin-top: 0;
+            }
+            .section1 .left {
+                padding: 4rem 1.5rem;
+            }
+
+            #section2 h2 {
+                font-size: 2.5rem;
+                text-align: center;
+            }
+            #section2 .description-text {
+                max-width: 100%;
+                text-align: center;
+            }
+            #section2 .text-content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .section3-left-text h2 {
+                 font-size: 2.5rem;
+            }
+
+            .section4-header h2 {
+                font-size: 2.5rem;
+            }
+
+            .section4-left h3 {
+                font-size: 1.8rem;
+            }
+             .item-number {
+                margin-bottom: 2rem;
+            }
+
+            .section5-right {
+                padding: 4rem 1.5rem;
+                text-align: center;
+            }
+            .section5-right h2 {
+                font-size: 2.5rem;
+                text-align: center;
+            }
+            .testimonial-navigation {
+                justify-content: center;
+            }
+            .footer-top {
+                 padding-left: 1rem;
+                 padding-right: 1rem;
+            }
+
+            .btn-primary {
+                transform: translate(-50%, 0);
+                margin-top: 2rem;
+                margin-bottom: -2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+
+            .showcase-image img {
+                width: 100%;
+            }
+
+            .contact-btn {
+                 padding: 1.2rem 2.5rem;
+                 font-size: 1.2rem;
+            }
+        }
     </style>
     <script type="application/ld+json">
     {
@@ -1391,6 +1610,13 @@
             </a>
         </div>
     </header>
+
+    <nav>
+        <a href="#section2">À propos</a>
+        <a href="#section3">Services</a>
+        <a href="#section4">Bénéfices</a>
+        <a href="#section5">Témoignages</a>
+    </nav>
 
     <section class="hero">
         <div class="hero-content">
@@ -1612,9 +1838,9 @@
             <img src="/static/assets/images/Capture d'écran 2025-12-09 210117.png" alt="Customer Testimonial Image">
         </div>
         <div class="section5-right">
-            <h2>Customer Testimonials – What Our Clients Say</h2>
-            <p>"Escape's at-home massage service is a game-changer. The therapist was incredibly skilled, professional,
-                and created a spa-like atmosphere right in my hotel room. I felt completely refreshed and renewed."</p>
+            <h2>
+Lorem ipsum dolor sit amet, consectetur adipiscing.</h2>
+            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In molestie lectus eu quam cursus, quis tincidunt ipsum consectetur. Integer nec dui dolor. Nullam rutrum, sem vitae vehicula varius, ante risus egestas metus."</p>
             <div class="testimonial-navigation">
                 <button class="arrow-btn left-arrow">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -1643,7 +1869,7 @@
                 <div class="footer-contact">
                     <div class="contact-item">
                         <img src="/static/assets/icons/espace-reserve.png" alt="Location icon">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p>Lorem ipsum dolor sit amet.</p>
                     </div>
                     <div class="contact-item">
                         <img src="/static/assets/icons/appel.png" alt="Phone icon">
