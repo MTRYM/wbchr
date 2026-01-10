@@ -2007,6 +2007,51 @@
                     track.appendChild(clone);
                 });
             });
+
+            const carouselData = [
+                {
+                    number: "01",
+                    title: "1h00 Soin Clarifiant",
+                    description: "Lissage des cheveux à sec, nettoyage, lotion, bain de vapeur + masque purifiant, cure intensive : ampoule visage, masque crème, massage du décolleté, étirement réveil de la musculature aux pieds",
+                    image: "/static/assets/images/bel-arrangement-avec-des-pierres-de-spa-et-des-bougies.jpg"
+                },
+                {
+                    number: "02",
+                    title: "1h00 Soin un temps pour moi",
+                    description: "Lissage des cheveux à secs, nettoyage, lotion, stimulation lymphatique avec les pinceaux, cures intensives : ampoules visage ou spray, masque crème, effleurage décolleté, compresse chaude sur nuque + épaules, crème soin du jour.",
+                    image: "/static/assets/images/fleurs-et-pierres-aux-bougies-floues.jpg"
+                }
+            ];
+
+            let currentCarouselIndex = 0;
+            const itemNumber = document.querySelector('.item-number');
+            const itemTitle = document.querySelector('.section4-left h3');
+            const itemDescription = document.querySelector('.section4-left p');
+            const itemImage = document.querySelector('.section4-right img');
+
+            function updateCarousel(index) {
+                const data = carouselData[index];
+                itemNumber.textContent = data.number;
+                itemTitle.textContent = data.title;
+                itemDescription.textContent = data.description;
+                itemImage.src = data.image;
+            }
+
+            const leftArrow = document.querySelector('.section4-main .left-arrow');
+            const rightArrow = document.querySelector('.section4-main .right-arrow');
+
+            leftArrow.addEventListener('click', () => {
+                currentCarouselIndex = (currentCarouselIndex - 1 + carouselData.length) % carouselData.length;
+                updateCarousel(currentCarouselIndex);
+            });
+
+            rightArrow.addEventListener('click', () => {
+                currentCarouselIndex = (currentCarouselIndex + 1) % carouselData.length;
+                updateCarousel(currentCarouselIndex);
+            });
+
+            // Initial call to display the first item
+            updateCarousel(currentCarouselIndex);
         });
     </script>
 </body>
