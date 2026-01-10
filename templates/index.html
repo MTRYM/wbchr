@@ -1246,14 +1246,6 @@
             flex-direction: column;
         }
 
-        .footer-logo-text {
-            font-family: 'Galient', sans-serif;
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--black);
-            margin-bottom: 16px;
-        }
-
         .footer-contact {
             display: flex;
             flex-direction: column;
@@ -1292,6 +1284,10 @@
             text-align: center;
         }
 
+        .footer-logo-image {
+            width: 100px;
+            height: auto;
+        }
         .link-column h3 {
             font-family: 'Inter', sans-serif;
             font-size: 1.15rem;
@@ -1589,6 +1585,23 @@
                 font-size: 1.2rem;
             }
         }
+
+        .fade-out {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .fade-in {
+            opacity: 1;
+            transition: opacity 0.4s ease;
+        }
+
+        #section4 .section4-left h3,
+        #section4 .section4-left p,
+        #section4 .section4-left .item-number,
+        #section4 .section4-right img {
+            transition: opacity 0.4s ease;
+        }
     </style>
     <script type="application/ld+json">
     {
@@ -1670,7 +1683,11 @@
             <h2>Un soin pour se ressourcer</h2>
         </div>
         <div class="middle-card">
-            <p>Les soins Metta-morphose s’appuient sur la qualité des produits Dr Hauschka, élaborés à partir d’ingrédients biologiques et biodynamiques. Ces soins accompagnent la peau dans son processus naturel de régénération, sans l’agresser. Chaque séance commence par un temps de détente, suivi de gestes précis qui favorisent la circulation et l’harmonie du visage. Le résultat : une peau rayonnante, reposée et équilibrée, et une sensation de bien-être durable.</p>
+            <p>Les soins Metta-morphose s’appuient sur la qualité des produits Dr Hauschka, élaborés à partir
+                d’ingrédients biologiques et biodynamiques. Ces soins accompagnent la peau dans son processus naturel de
+                régénération, sans l’agresser. Chaque séance commence par un temps de détente, suivi de gestes précis
+                qui favorisent la circulation et l’harmonie du visage. Le résultat : une peau rayonnante, reposée et
+                équilibrée, et une sensation de bien-être durable.</p>
             <a href="#" class="reservation-button-card arrow-hover-effect">
                 Réservation
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
@@ -1694,7 +1711,8 @@
                     <p class="intro-text">Chemin intérieur</p>
                     <h2>Un parcours de soin, d’apprentissage et de présence vivante</h2>
                     <p class="description-text">
-                        De la découverte sensorielle à la maîtrise du geste, chaque étape reflète un engagement profond envers la qualité, la justesse et la beauté naturelle du soin Dr Hauschka.
+                        De la découverte sensorielle à la maîtrise du geste, chaque étape reflète un engagement profond
+                        envers la qualité, la justesse et la beauté naturelle du soin Dr Hauschka.
                     </p>
                 </div>
                 <div class="image-content">
@@ -1743,7 +1761,8 @@
                 <div class="step-card">
                     <div class="step-label">Carte 4</div>
                     <h3>Actualisation et justesse</h3>
-                    <p>Une formation renouvelée à Paris en 2023 pour perfectionner le protocole et offrir un soin toujours plus juste, respectueux et personnalisé.</p>
+                    <p>Une formation renouvelée à Paris en 2023 pour perfectionner le protocole et offrir un soin
+                        toujours plus juste, respectueux et personnalisé.</p>
                     <a href="#" class="arrow-hover-effect">Réservation <svg xmlns="http://www.w3.org/2000/svg"
                             width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="arrow-icon">
@@ -1825,7 +1844,8 @@
         <div class="section4-container">
             <div class="section4-header reveal">
                 <h2>Des soins adaptés,<br>pour chaque besoin</h2>
-                <p>Deux soins ciblés pour purifier, apaiser et rééquilibrer la peau tout en offrant un moment de détente profonde et de reconnexion à soi.</p>
+                <p>Les soins sont ciblés pour purifier, apaiser et rééquilibrer la peau tout en offrant un moment de détente
+                    profonde et de reconnexion à soi.</p>
             </div>
             <div class="section4-main">
                 <div class="section4-left reveal">
@@ -1876,7 +1896,7 @@
         </div>
         <div class="section5-right">
             <h2>
-                Lorem ipsum dolor sit amet, consectetur adipiscing.</h2>
+                Témoignages clients —<br> ce que disent nos clients</h2>
             <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In molestie lectus eu quam cursus, quis
                 tincidunt ipsum consectetur. Integer nec dui dolor. Nullam rutrum, sem vitae vehicula varius, ante risus
                 egestas metus."</p>
@@ -1903,20 +1923,20 @@
         <div class="footer-container">
             <div class="footer-top">
                 <div class="footer-logo">
-                    <div class="footer-logo-text">Your Logo</div>
+                    <div class="footer-logo"><img src="/static/assets/logos/logo_mm.png" alt="Logo" class="footer-logo-image"></div>
                 </div>
                 <div class="footer-contact">
-                    <div class="contact-item">
+                    <!--<div class="contact-item">
                         <img src="/static/assets/icons/espace-reserve.png" alt="Location icon">
                         <p>Lorem ipsum dolor sit amet.</p>
-                    </div>
+                    </div>-->
                     <div class="contact-item">
                         <img src="/static/assets/icons/appel.png" alt="Phone icon">
-                        <p>+33 0 00 00 00 00</p>
+                        <p>+33 6 04 40 70 31</p>
                     </div>
                     <div class="contact-item">
                         <img src="/static/assets/icons/courrier.png" alt="Email icon">
-                        <p>lorem@ipsum.com</p>
+                        <p>christele.monnier@gmail.com</p>
                     </div>
                 </div>
             </div>
@@ -1949,7 +1969,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; Copyright 2025 Nom de l'entreprise</p>
+                <p>&copy; Copyright 2025 Metta-morphose</p>
             </div>
         </div>
     </footer>
@@ -2006,6 +2026,65 @@
                     const clone = item.cloneNode(true);
                     track.appendChild(clone);
                 });
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const leftArrow = document.querySelector("#section4 .left-arrow");
+            const rightArrow = document.querySelector("#section4 .right-arrow");
+
+            const titleEl = document.querySelector("#section4 .section4-left h3");
+            const descEl = document.querySelector("#section4 .section4-left p");
+            const numEl = document.querySelector("#section4 .section4-left .item-number");
+            const imgEl = document.querySelector("#section4 .section4-right img");
+
+            const slides = [
+                {
+                    num: "01",
+                    title: "1h00 Soin Clarifiant",
+                    desc: "Lissage des cheveux à sec, nettoyage, lotion, bain de vapeur + masque purifiant, cure intensive : ampoule visage, masque crème, massage du décolleté, étirement réveil de la musculature aux pieds.",
+                    img: "/static/assets/images/bel-arrangement-avec-des-pierres-de-spa-et-des-bougies.jpg"
+                },
+                {
+                    num: "02",
+                    title: "1h00 Soin un temps pour moi",
+                    desc: "Lissage des cheveux à secs, nettoyage, lotion, stimulation lymphatique avec les pinceaux, cures intensives : ampoules visage ou spray, masque crème, effleurage décolleté, compresse chaude sur nuque + épaules, crème soin du jour.",
+                    img: "/static/assets/images/bel-arrangement-avec-des-pierres-de-spa-et-des-bougies.jpg"
+                }
+            ];
+
+            let current = 0;
+
+            function fadeOutIn(element, newContent, isImage = false) {
+                element.classList.add("fade-out");
+                setTimeout(() => {
+                    if (isImage) {
+                        element.src = newContent;
+                    } else {
+                        element.textContent = newContent;
+                    }
+                    element.classList.remove("fade-out");
+                    element.classList.add("fade-in");
+                    setTimeout(() => element.classList.remove("fade-in"), 400);
+                }, 300);
+            }
+
+            function updateSlide(index) {
+                const slide = slides[index];
+                fadeOutIn(numEl, slide.num);
+                fadeOutIn(titleEl, slide.title);
+                fadeOutIn(descEl, slide.desc);
+                fadeOutIn(imgEl, slide.img, true);
+            }
+
+            leftArrow.addEventListener("click", () => {
+                current = (current - 1 + slides.length) % slides.length;
+                updateSlide(current);
+            });
+
+            rightArrow.addEventListener("click", () => {
+                current = (current + 1) % slides.length;
+                updateSlide(current);
             });
         });
     </script>
