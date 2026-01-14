@@ -59,7 +59,7 @@
         }
 
         body {
-            background: var(--white);
+            background: var(--green);
             color: var(--black);
             scroll-behavior: smooth;
         }
@@ -68,12 +68,13 @@
             top: 0;
             left: 0;
             width: 100%;
-            padding: 1.5rem 3rem;
+            padding: 1.25rem 3rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
             background: var(--green);
             z-index: 1000;
+            position: fixed;
         }
 
         .contact-btn-header {
@@ -118,21 +119,6 @@
             width: 100%;
         }
 
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-weight: 800;
-            font-size: 1.5rem;
-            color: var(--black);
-            text-decoration: none;
-        }
-
-        .logo svg {
-            width: 40px;
-            height: 40px;
-            fill: var(--black);
-        }
 
         section {
             padding: 6rem 2rem 4rem;
@@ -147,10 +133,11 @@
 
         .hero {
             background: var(--green);
-            padding: 180px 0px 0px 0px;
+            padding: 0px;
             text-align: center;
             position: relative;
             z-index: 20;
+            margin-top: 300px;
         }
 
         .hero-content {
@@ -202,9 +189,8 @@
         }
 
         .logo-img {
-            width: 160px;
+            width: 16rem;
             height: auto;
-            display: none;
         }
 
 
@@ -1288,6 +1274,7 @@
             width: 100px;
             height: auto;
         }
+
         .link-column h3 {
             font-family: 'Inter', sans-serif;
             font-size: 1.15rem;
@@ -1639,8 +1626,9 @@
         </button>
 
 
-        <a href="#" class="logo">
-            <img src="images/logo.png" alt="Your Logo" class="logo-img">
+        <a href="index.html" class="logo"
+            style="position:absolute;left:50%;transform:translateX(-50%);display: flex;align-items: center;">
+            <img src="/static/assets/logos/metta-morphose_logo_white.png" alt="Logo Metta-morphose" class="logo-img">
         </a>
 
         <div class="header-contact">
@@ -1670,11 +1658,11 @@
         </div>
 
         <div class="showcase-image">
-            <img src="/static/assets/images/produits-de-spa-aux-orchidees.jpg" alt="Showcase Image">
-            <img src="/static/assets/images/produits-de-spa-aux-orchidees.jpg" alt="Showcase Image">
-            <img src="/static/assets/images/produits-de-spa-aux-orchidees.jpg" alt="Showcase Image">
-            <img src="/static/assets/images/produits-de-spa-aux-orchidees.jpg" alt="Showcase Image">
-            <img src="/static/assets/images/produits-de-spa-aux-orchidees.jpg" alt="Showcase Image">
+            <img src="/static/assets/images/s1.png" alt="Showcase Image">
+            <img src="/static/assets/images/s2.png" alt="Showcase Image">
+            <img src="/static/assets/images/s4.png" alt="Showcase Image">
+            <img src="/static/assets/images/s3.png" alt="Showcase Image">
+            <img src="/static/assets/images/s5.png" alt="Showcase Image">
         </div>
     </section>
 
@@ -1699,7 +1687,7 @@
             </a>
         </div>
         <div class="right">
-            <img src="/static/assets/images/fleurs-et-pierres-aux-bougies-floues.jpg" alt="Massage-image" width="40"
+            <img src="/static/assets/images/Anthyllide à la main.jpg" alt="Massage-image" width="40"
                 height="40">
         </div>
     </section>
@@ -1716,7 +1704,7 @@
                     </p>
                 </div>
                 <div class="image-content">
-                    <img src="/static/assets/images/fleurs-et-pierres-aux-bougies-floues.jpg"
+                    <img src="/static/assets/images/pexels-karola-g-6629555.jpg"
                         alt="Massage therapy session">
                 </div>
             </div>
@@ -1805,7 +1793,7 @@
                 </div>
             </div>
             <div class="section3-center-image">
-                <img src="/static/assets/images/produits-de-spa-aux-orchidees.jpg"
+                <img src="/static/assets/images/s41.png"
                     alt="Image centrale des rituels de spa">
                 <a href="#" class="reservation-button arrow-hover-effect">Réservation
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
@@ -1844,7 +1832,8 @@
         <div class="section4-container">
             <div class="section4-header reveal">
                 <h2>Des soins adaptés,<br>pour chaque besoin</h2>
-                <p>Les soins sont ciblés pour purifier, apaiser et rééquilibrer la peau tout en offrant un moment de détente
+                <p>Les soins sont ciblés pour purifier, apaiser et rééquilibrer la peau tout en offrant un moment de
+                    détente
                     profonde et de reconnexion à soi.</p>
             </div>
             <div class="section4-main">
@@ -1865,7 +1854,7 @@
                     </a>
                 </div>
                 <div class="section4-right reveal">
-                    <img src="/static/assets/images/bel-arrangement-avec-des-pierres-de-spa-et-des-bougies.jpg"
+                    <img src="/static/assets/images/pexels-karola-g-6629551.jpg"
                         alt="Woman receiving a relaxing massage">
                     <div class="navigation-arrows">
                         <button class="arrow-btn left-arrow">
@@ -1892,7 +1881,7 @@
 
     <section id="section5">
         <div class="section5-left">
-            <img src="/static/assets/images/Capture d'écran 2025-12-09 210117.png" alt="Customer Testimonial Image">
+            <img src="/static/assets/images/s51.png" alt="Customer Testimonial Image">
         </div>
         <div class="section5-right">
             <h2>
@@ -1923,7 +1912,8 @@
         <div class="footer-container">
             <div class="footer-top">
                 <div class="footer-logo">
-                    <div class="footer-logo"><img src="/static/assets/logos/logo_mm.png" alt="Logo" class="footer-logo-image"></div>
+                    <div class="footer-logo"><img src="/static/assets/logos/logo_mm.png" alt="Logo"
+                            class="footer-logo-image"></div>
                 </div>
                 <div class="footer-contact">
                     <!--<div class="contact-item">
@@ -2043,13 +2033,13 @@
                     num: "01",
                     title: "1h00 Soin Clarifiant",
                     desc: "Lissage des cheveux à sec, nettoyage, lotion, bain de vapeur + masque purifiant, cure intensive : ampoule visage, masque crème, massage du décolleté, étirement réveil de la musculature aux pieds.",
-                    img: "/static/assets/images/bel-arrangement-avec-des-pierres-de-spa-et-des-bougies.jpg"
+                    img: "/static/assets/images/pexels-karola-g-6629551.jpg"
                 },
                 {
                     num: "02",
                     title: "1h00 Soin un temps pour moi",
                     desc: "Lissage des cheveux à secs, nettoyage, lotion, stimulation lymphatique avec les pinceaux, cures intensives : ampoules visage ou spray, masque crème, effleurage décolleté, compresse chaude sur nuque + épaules, crème soin du jour.",
-                    img: "/static/assets/images/bel-arrangement-avec-des-pierres-de-spa-et-des-bougies.jpg"
+                    img: "/static/assets/images/pexels-karola-g-6629554.jpg"
                 }
             ];
 
@@ -2085,6 +2075,27 @@
             rightArrow.addEventListener("click", () => {
                 current = (current + 1) % slides.length;
                 updateSlide(current);
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const header = document.querySelector("header");
+
+            window.addEventListener("scroll", () => {
+                if (window.scrollY > 20) {
+                    header.style.backgroundColor = "#012d2c";
+                    header.style.position = "fixed";
+                    header.style.top = "0";
+                    header.style.left = "0";
+                    header.style.width = "100%";
+                    header.style.zIndex = "1000";
+                    header.style.transition = "background-color 0.3s ease";
+                    header.style.boxShadow = "0 2px 8px rgba(0, 0, 0, 0.15)";
+                } else {
+                    header.style.backgroundColor = "var(--green)";
+                    header.style.position = "fixed";
+                    header.style.boxShadow = "none";
+                }
             });
         });
     </script>
