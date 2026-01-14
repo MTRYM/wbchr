@@ -1,1 +1,536 @@
 
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>À propos – Metta-morphose</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    @font-face {
+      font-family: 'Galient';
+      src: url('/static/assets/fonts/Gallient.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    :root {
+      --black: #000000;
+      --white: #FFFFFF;
+      --green: #043736;
+      --dark--green: #f9dcd6;
+      --beige: #F9F5F0;
+      --grey-light: #F4F4F4;
+      --pink: #E8AABE;
+      --pink-dark: #DB6A8F;
+      --text-color: #1A1A1A;
+      --grey: #EDEDED;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--beige);
+      color: var(--text-color);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.7;
+    }
+
+    /* HEADER identique */
+    header {
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 1.5rem 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--green);
+      color: var(--white);
+    }
+
+    .contact-btn-header {
+      background: rgba(255, 255, 255, 0.2);
+      color: var(--white);
+      padding: 1em 1.25rem;
+      border-radius: 8px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-weight: 400;
+    }
+
+    .contact-btn-header:hover {
+      background: rgba(255, 255, 255, 0.4);
+    }
+
+    nav a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: var(--white);
+      font-weight: 600;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--blue-dark);
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .logo-img {
+      width: 16rem;
+      height: auto;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+
+    section {
+      max-width: 1100px;
+      width: 100%;
+      padding: 6rem 2rem;
+      margin: 0 auto;
+    }
+
+    h1,
+    h2 {
+      font-family: 'Galient', sans-serif;
+      color: var(--green);
+      margin-bottom: 2rem;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3.5rem;
+      margin-top: 3rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-top: 3rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.4rem;
+      text-align: justify;
+    }
+
+    .section-divider {
+      height: 1px;
+      background-color: var(--grey-light);
+      margin: 4rem 0;
+      width: 100%;
+    }
+
+    .image-placeholder {
+      width: 100%;
+      max-width: 800px;
+      height: 400px;
+      background: var(--grey-light);
+      border: 2px dashed var(--green);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      color: var(--green);
+      margin: 2rem auto;
+    }
+
+    .return-btn {
+      display: inline-block;
+      margin: 4rem auto 2rem;
+      background-color: var(--green);
+      color: var(--white);
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .return-btn:hover {
+      background-color: var(--pink-dark);
+    }
+
+    .menu-label {
+      font-size: 1rem;
+      color: white;
+      font-weight: 400;
+    }
+
+    .hamburger {
+      flex-direction: row;
+      justify-content: space-between;
+      background: none;
+      border: none;
+      cursor: pointer;
+      z-index: 1100;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-radius: 6px;
+      padding: 1em 1.25rem;
+      transition: all 0.3s ease;
+    }
+
+    .hamburger:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .hamburger .span-icon {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 24px;
+      height: 20px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      z-index: 1100;
+    }
+
+    .hamburger .span-icon span {
+      height: 2px;
+      width: 100%;
+      background: var(--white);
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+
+    .hamburger .span-icon {
+      display: flex;
+    }
+
+    footer {
+      background-color: var(--white);
+      padding: 7rem 0rem 3rem 0rem;
+      color: var(--black);
+      text-align: left;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 2rem;
+      flex-direction: column;
+    }
+
+    .footer-contact {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .contact-item img {
+      width: 18px;
+      height: auto;
+    }
+
+    .contact-item p {
+      margin: 0;
+      font-size: 0.9rem;
+    }
+
+    .footer-main {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 2rem 0;
+      border-top: 1px solid var(--grey);
+      border-bottom: 1px solid var(--grey);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 18rem;
+      text-align: center;
+    }
+
+    .footer-logo-image {
+      width: 100px;
+      height: auto;
+    }
+
+    .link-column h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.15rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    .link-column {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .link-column a {
+      text-decoration: none;
+      color: var(--black);
+      font-size: 1rem;
+      font-weight: 400;
+      transition: all 0.3s ease;
+    }
+
+    .link-column a:hover {
+      color: var(--dark--green);
+    }
+
+    .link-column a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0;
+      height: 2px;
+      background-color: currentColor;
+      transition: width 0.3s ease;
+    }
+
+    .link-column a:hover::after {
+      width: 100%;
+    }
+
+
+    .footer-newsletter {
+      max-width: 350px;
+    }
+
+    .footer-newsletter h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    .footer-newsletter p {
+      font-size: 0.9rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.5;
+    }
+
+    .footer-bottom {
+      padding-top: 1rem;
+      text-align: center;
+      font-size: 0.8rem;
+    }
+
+    .footer-little-paragraphe {
+      margin: 0;
+      text-align: center;
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <button class="hamburger" aria-label="Menu">
+      <div class="span-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <span class="menu-label">Menu</span>
+    </button>
+
+    <!-- Logo centré -->
+    <a href="index.html" class="logo"
+      style="position:absolute;left:50%;transform:translateX(-50%);display: flex;align-items: center;">
+      <img src="/static/assets/logos/metta-morphose_logo_white.png" alt="Logo Metta-morphose" class="logo-img">
+    </a>
+
+    <!-- Bouton Réservation à droite -->
+    <div class="header-contact">
+      <a href="mailto:contact@yourwebsite.com" class="contact-btn-header arrow-hover-effect">
+        Réservation
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="arrow-icon">
+          <line x1="7" y1="17" x2="17" y2="7"></line>
+          <polyline points="7 7 17 7 17 17"></polyline>
+        </svg>
+      </a>
+    </div>
+  </header>
+  <main>
+    <section>
+      <h1>À propos de moi</h1>
+      <p>Bonjour, bienvenue sur le site de <strong>Metta-morphose</strong> !
+        Je m’appelle <strong>Christèle Monnier</strong> et je suis heureuse de partager avec vous ce qui m’anime…</p>
+
+      <p>Mots clés qui me « définissent » dans la résonance :
+        Amoureuse de la Nature / Respect des rythmes de la Nature / Mouvement / Danse / Douceur / Profondeur / Reliance
+        / Respect / Paix / Accueillante / Joyeuse / Sociable / Présente / Consciente / Simplicité / Harmonie.</p>
+
+      <p>J’ai à cœur de transmettre ces valeurs via un toucher de présence, la cohésion de la vibrance des propriétés
+        naturelles des plantes.
+        Celles-ci permettent une re-connexion à soi et nourrissent chaque cellule.
+        « La peau se rééquilibre par elle-même », apportant une métamorphose.
+        J’ai également le goût de vous partager le plaisir de comment prendre soin de soi via le rituel quotidien
+        jour/nuit.</p>
+
+      <div class="image-placeholder">Image nature apaisante</div>
+
+      <div class="section-divider"></div>
+
+      <h2>1ère étape : Découverte expérientielle du Soin du Visage Dr Hauschka</h2>
+      <p>Tout a commencé en 2003, lors de la recherche d’un institut pour la formation en alternance du CAP « esthétique
+        – cosmétique ».
+        À Toulouse, assise sur un banc, c’était en feuilletant le bottin des instituts que mon regard s’est déposé sur
+        un encart :
+        « Institut Dr Hauschka de Christine S – Produits cosmétiques Biologiques et Biodynamiques ».</p>
+
+      <p>En me présentant auprès d’elle et en lui évoquant la raison de ma venue, Christine m’expliqua que son espace
+        était trop petit pour m’accueillir en stage.
+        Cependant, elle a tenu à m’offrir un soin visage Dr Hauschka.</p>
+
+      <p>Seconde surprise quand ce soin débuta par un bain de pieds.
+        Ce fut tout un cadeau que de capter l’énergie des plantes à travers la qualité de son toucher rythmique, de
+        sentir la fragrance naturelle et authentique des produits.
+        Tous mes sens étaient en effervescence, tel un pétillement vibrant dans chacune de mes cellules.</p>
+
+      <p><em>Un souvenir mémorable ayant comme qualificatif : « Toute une expérience vibrante ».</em></p>
+
+      <div class="image-placeholder">Image “Soin du visage”</div>
+
+      <div class="section-divider"></div>
+
+      <h2>2ème étape : Présentation de la gamme Dr Hauschka à Montréal</h2>
+      <p>En 2013, j’ai eu l’opportunité d’assister à la présentation des produits Dr Hauschka, organisée par Enaam
+        (propriétaire du Spa Dr Hauschka à Montréal).
+        Lors de cette journée, elle nous a présenté avec passion l’historique de la gamme, le déroulé du rituel
+        quotidien et elle nous a fait sentir et tester les produits.</p>
+
+      <p>Être en contact avec la texture, les odeurs et l’éthique de la marque a conforté mes valeurs et réactivé les
+        souvenirs des sensations vécues lors de mon expérience vibrante du soin reçu par Christine.</p>
+
+      <p>J’ai alors ressenti en moi l’élan de suivre la formation des soins du Visage Dr Hauschka que j’ai pratiqué
+        pendant six ans à Sutton au Québec, jusqu’à l’épisode du Covid.</p>
+
+      <p>De retour en France en 2023, j’ai choisi de refaire la formation des Soins du Visage à Paris afin de mettre à
+        jour mes connaissances et parfaire le protocole.</p>
+
+      <div class="image-placeholder">Image ambiance douce ou plantes</div>
+
+      <div style="text-align:center;">
+        <a href="index.html" class="return-btn">Retour à l’accueil</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-logo">
+          <img src="/static/assets/logos/logo_mm.png" alt="Logo" class="footer-logo-image">
+        </div>
+        <div class="footer-contact">
+          <div class="contact-item">
+            <img src="/static/assets/icons/appel.png" alt="Phone icon">
+            <p>+33 6 04 40 70 31</p>
+          </div>
+          <div class="contact-item">
+            <img src="/static/assets/icons/courrier.png" alt="Email icon">
+            <p>christele.monnier@gmail.com</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-main">
+        <div class="footer-links">
+          <div class="link-column">
+            <h3>Service</h3>
+            <a href="#">Lorem</a>
+            <a href="#">Lorem Ipsum</a>
+            <a href="#">Pricelist</a>
+            <a href="#">Lorem Ipsum</a>
+            <a href="#">Lorem</a>
+          </div>
+          <div class="link-column">
+            <h3>Service</h3>
+            <a href="#">Lorem</a>
+            <a href="#">Lorem Ipsum</a>
+            <a href="#">Pricelist</a>
+            <a href="#">Lorem Ipsum</a>
+            <a href="#">Lorem</a>
+          </div>
+          <div class="link-column">
+            <h3>Service</h3>
+            <a href="#">Lorem</a>
+            <a href="#">Lorem Ipsum</a>
+            <a href="#">Pricelist</a>
+            <a href="#">Lorem Ipsum</a>
+            <a href="#">Lorem</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-little-paragraphe">&copy; Copyright 2026 Metta-morphose</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+<script>
+  const hamburger = document.querySelector(".hamburger");
+  const nav = document.querySelector("nav");
+
+  hamburger.addEventListener("click", () => {
+    nav.classList.toggle("open");
+  });
+
+  document.querySelectorAll("nav a").forEach(link => {
+    link.addEventListener("click", () => {
+      nav.classList.remove("open");
+    });
+  });
+</script>
+
+</html>
