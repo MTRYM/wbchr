@@ -1,0 +1,10 @@
+127.0.0.1 - - [14/Jan/2026 18:29:03] "GET /templates/me-contacter.html HTTP/1.1" 200 -
+127.0.0.1 - - [14/Jan/2026 18:29:03] code 404, message File not found
+127.0.0.1 - - [14/Jan/2026 18:29:03] "GET /static/assets/logos/metta-morphose_logo_white.png HTTP/1.1" 404 -
+127.0.0.1 - - [14/Jan/2026 18:29:03] code 404, message File not found
+127.0.0.1 - - [14/Jan/2026 18:29:03] "GET /static/assets/logos/logo_mm.png HTTP/1.1" 404 -
+127.0.0.1 - - [14/Jan/2026 18:29:03] code 404, message File not found
+127.0.0.1 - - [14/Jan/2026 18:29:03] "GET /static/assets/icons/appel.png HTTP/1.1" 404 -
+127.0.0.1 - - [14/Jan/2026 18:29:03] code 404, message File not found
+127.0.0.1 - - [14/Jan/2026 18:29:03] "GET /static/assets/icons/courrier.png HTTP/1.1" 404 -
+127.0.0.1 - - [14/Jan/2026 18:29:03] "GET /static/assets/fonts/Gallient.ttf HTTP/1.1" 200 -
