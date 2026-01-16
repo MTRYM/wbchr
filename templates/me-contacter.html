@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="A high-quality template for showcasing your services or products. Easily customizable for any business.">
+    <meta name="keywords" content="template, website, landing page, responsive, modern, business">
+    <meta name="author" content="Your Name or Company">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Your Website Title">
+    <meta property="og:description" content="A brief description of your website for social media sharing.">
+    <meta property="og:image" content="images/og-image.jpg">
+    <meta property="og:url" content="https://www.yourwebsite.com">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <title>Your Title | Your Name</title>
+
+    <link rel="canonical" href="https://www.yourwebsite.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        @font-face {
+            font-family: 'Galient';
+            src: url('../static/assets/fonts/Gallient.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        :root {
+            --black: #000000;
+            --white: #FFFFFF;
+            --blue-light: #A7E0E0;
+            --blue-mid: #4AA3A2;
+            --blue-dark: #1F3B68;
+            --beige: #F9F5F0;
+            --grey-light: #F4F4F4;
+            --grey: #EDEDED;
+            --grey-dark: #C4C4C4;
+            --dark: #1A1A1A;
+            --pink: #E8AABE;
+            --pink-dark: #DB6A8F;
+            --pink-darker: #CA3C66;
+            --green: #043736;
+            --dark--green: #f9dcd6;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: var(--green);
+            color: var(--black);
+            scroll-behavior: smooth;
+        }
+
+        header {
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 1.25rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgb(1, 45, 44);
+            z-index: 1000;
+            position: fixed;
+        }
+
+        .contact-btn-header {
+            background: rgba(255, 255, 255, 0.2);
+            color: var(--white);
+            padding: 1em 1.25rem;
+            border-radius: 8px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-weight: 400;
+        }
+
+        .contact-btn-header:hover {
+            background: rgba(255, 255, 255, 0.4);
+        }
+
+        nav a {
+            margin-left: 1.5rem;
+            text-decoration: none;
+            color: var(--white);
+            font-weight: 600;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--blue-dark);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .logo-img {
+            width: 16rem;
+            height: auto;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            line-height: 1.1;
+            text-align: center;
+        }
+        
+        .contact-section {
+            padding: 12rem 2rem 6rem;
+            text-align: center;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .contact-section h1 {
+            font-family: 'Galient', sans-serif;
+            font-size: 4.5rem;
+            color: var(--white);
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-section p {
+            font-size: 1.25rem;
+            color: var(--white);
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 2.5rem;
+            line-height: 1.6;
+        }
+
+        .contact-section .phone-number {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--dark--green);
+            text-decoration: none;
+            border: 2px solid var(--dark--green);
+            padding: 1.5rem 3rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-section .phone-number:hover {
+            background-color: var(--dark--green);
+            color: var(--green);
+        }
+        footer {
+            background-color: var(--white);
+            padding: 7rem 0rem 3rem 0rem;
+            color: var(--black);
+            text-align: left;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .footer-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 2rem;
+            flex-direction: column;
+        }
+        .footer-contact {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .contact-item img {
+            width: 18px;
+            height: auto;
+        }
+
+        .contact-item p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        .footer-main {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 2rem 0;
+            border-top: 1px solid var(--grey);
+            border-bottom: 1px solid var(--grey);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 18rem;
+            text-align: center;
+        }
+
+        .footer-logo-image {
+            width: 100px;
+            height: auto;
+        }
+        .link-column h3 {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.15rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .link-column {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .link-column a {
+            text-decoration: none;
+            color: var(--black);
+            font-size: 1rem;
+            font-weight: 400;
+            transition: all 0.3s ease;
+        }
+
+        .link-column a:hover {
+            color: var(--dark--green);
+        }
+
+        .link-column a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 0;
+            height: 2px;
+            background-color: currentColor;
+            transition: width 0.3s ease;
+        }
+
+        .link-column a:hover::after {
+            width: 100%;
+        }
+
+        .footer-bottom {
+            padding-top: 1rem;
+            text-align: center;
+            font-size: 0.8rem;
+        }
+
+        .hamburger {
+            flex-direction: row;
+            justify-content: space-between;
+            background: none;
+            border: none;
+            cursor: pointer;
+            z-index: 1100;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border-radius: 6px;
+            padding: 1em 1.25rem;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .hamburger .span-icon {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 24px;
+            height: 20px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            z-index: 1100;
+        }
+
+        .hamburger .span-icon span {
+            height: 2px;
+            width: 100%;
+            background: var(--white);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger .span-icon {
+            display: flex;
+        }
+
+        @media (min-width: 769px) {
+            .menunav {
+                display: none;
+            }
+        }
+        .menu-label {
+            font-size: 1rem;
+            color: white;
+            font-weight: 400;
+        }
+        @media (max-width: 768px) {
+            nav {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                height: 100vh;
+                width: 240px;
+                background: var(--green);
+                display: flex;
+                flex-direction: column;
+                padding-top: 80px;
+                gap: 1.5rem;
+                align-items: center;
+                box-shadow: -4px 0 12px rgba(0, 0, 0, 0.1);
+                transition: right 0.3s ease;
+                z-index: 1050;
+            }
+
+            nav.open {
+                right: 0;
+            }
+
+            nav a {
+                margin: 0;
+                font-size: 1.2rem;
+                padding: 0.5rem 0;
+                width: 80%;
+                text-align: center;
+                border-radius: 5px;
+                transition: background-color 0.3s ease;
+            }
+
+            nav a:hover {
+                background-color: rgba(255, 255, 255, 0.1);
+            }
+
+            .header-contact {
+                display: none;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .footer-links {
+                gap: 4rem;
+            }
+        }
+
+
+        @media (max-width: 768px) {
+
+            .footer-main {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 2rem;
+                text-align: center;
+            }
+
+            header {
+                padding: 1rem 1.5rem;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <button class="hamburger" aria-label="Menu">
+            <div class="span-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <span class="menu-label">Menu</span>
+        </button>
+
+        <a href="index.html" class="logo"
+            style="position:absolute;left:50%;transform:translateX(-50%);display: flex;align-items: center;">
+            <img src="../static/assets/logos/metta-morphose_logo_white.png" alt="Logo Metta-morphose" class="logo-img">
+        </a>
+
+        <div class="header-contact">
+            <a href="me-contacter.html" class="contact-btn-header arrow-hover-effect">Reservation
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                    class="arrow-icon">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+            </a>
+        </div>
+    </header>
+    <nav class="menunav">
+        <a href="index.html#section2">À propos</a>
+        <a href="index.html#section3">Services</a>
+        <a href="index.html#section4">Bénéfices</a>
+        <a href="index.html#section5">Témoignages</a>
+    </nav>
+
+    <section class="contact-section">
+        <h1>Me contacter</h1>
+        <p>Pour toute question ou pour prendre rendez-vous, n'hésitez pas à m'appeler. Je serai ravie de vous répondre et de vous accompagner.</p>
+        <a href="tel:+33604407031" class="phone-number">+33 6 04 40 70 31</a>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <div class="footer-logo"><img src="../static/assets/logos/logo_mm.png" alt="Logo"
+                            class="footer-logo-image"></div>
+                </div>
+                <div class="footer-contact">
+                    <div class="contact-item">
+                        <img src="../static/assets/icons/appel.png" alt="Phone icon">
+                        <p>+33 6 04 40 70 31</p>
+                    </div>
+                    <div class="contact-item">
+                        <img src="../static/assets/icons/courrier.png" alt="Email icon">
+                        <p>christele.monnier@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-main">
+                <div class="footer-links">
+                    <div class="link-column">
+                        <h3>Service</h3>
+                        <a href="#">Lorem</a>
+                        <a href="#">Lorem Ipsum</a>
+                        <a href="#">Pricelist</a>
+                        <a href="#">Lorem Ipsum</a>
+                        <a href="#">Lorem</a>
+                    </div>
+                    <div class="link-column">
+                        <h3>Service</h3>
+                        <a href="#">Lorem</a>
+                        <a href="#">Lorem Ipsum</a>
+                        <a href="#">Pricelist</a>
+                        <a href="#">Lorem Ipsum</a>
+                        <a href="#">Lorem</a>
+                    </div>
+                    <div class="link-column">
+                        <h3>Service</h3>
+                        <a href="#">Lorem</a>
+                        <a href="#">Lorem Ipsum</a>
+                        <a href="#">Pricelist</a>
+                        <a href="#">Lorem Ipsum</a>
+                        <a href="#">Lorem</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; Copyright 2025 Metta-morphose</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const nav = document.querySelector("nav");
+
+        hamburger.addEventListener("click", () => {
+            nav.classList.toggle("open");
+        });
+
+        document.querySelectorAll("nav a").forEach(link => {
+            link.addEventListener("click", () => {
+                nav.classList.remove("open");
+            });
+        });
+    </script>
+</body>
+</html>
