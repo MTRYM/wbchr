@@ -491,19 +491,6 @@
             </div>
         </div>
     </footer>
-    <script>
-        const hamburger = document.querySelector(".hamburger");
-        const nav = document.querySelector("nav");
-
-        hamburger.addEventListener("click", () => {
-            nav.classList.toggle("open");
-        });
-
-        document.querySelectorAll("nav a").forEach(link => {
-            link.addEventListener("click", () => {
-                nav.classList.remove("open");
-            });
-        });
-    </script>
+    <script src="/static/js/main.js" defer></script>
 </body>
 </html>

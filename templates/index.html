@@ -1938,7 +1938,8 @@
                 </button>
                 <button class="arrow-btn right-arrow">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
                         <line x1="5" y1="12" x2="19" y2="12"></line>
                         <polyline points="12 5 19 12 12 19"></polyline>
                     </svg>
@@ -1985,158 +1986,7 @@
             </div>
         </div>
     </footer>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add("visible");
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.2 });
-
-            const elementsToAnimate = document.querySelectorAll(
-                "h1, h2, .btn-primary, .btn-large, .contact-btn, .testimonial-card, .hero p.lead"
-            );
-            elementsToAnimate.forEach((el) => {
-                el.classList.add("reveal");
-            });
-
-            const allRevealElements = document.querySelectorAll('.reveal');
-            allRevealElements.forEach((el) => {
-                observer.observe(el);
-            });
-
-            const frames = document.querySelectorAll('.features-frame');
-            let index = 0;
-            setInterval(() => {
-                frames.forEach((frame, i) => {
-                    frame.classList.toggle('visible', i === index);
-                });
-                index = (index + 1) % frames.length;
-            }, 3000);
-
-        });
-        const hamburger = document.querySelector(".hamburger");
-        const nav = document.querySelector(".menunav");
-        const closeBtn = document.querySelector(".close-btn");
-        const body = document.body;
-
-        function openNav() {
-            nav.classList.add("open");
-            body.classList.add("overlay", "side-panel-open");
-        }
-
-        function closeNav() {
-            nav.classList.remove("open");
-            body.classList.remove("overlay", "side-panel-open");
-        }
-
-        hamburger.addEventListener("click", openNav);
-        closeBtn.addEventListener("click", closeNav);
-
-        document.querySelectorAll(".menunav a").forEach(link => {
-            link.addEventListener("click", closeNav);
-        });
-
-        // Close nav when clicking on the overlay
-        document.addEventListener("click", function (event) {
-            if (event.target === body && body.classList.contains("side-panel-open")) {
-                closeNav();
-            }
-        });
-        document.addEventListener("DOMContentLoaded", () => {
-            document.querySelectorAll('.gallery-track').forEach(track => {
-                const items = Array.from(track.children);
-                items.forEach(item => {
-                    const clone = item.cloneNode(true);
-                    track.appendChild(clone);
-                });
-            });
-        });
-
-        document.addEventListener("DOMContentLoaded", () => {
-            const leftArrow = document.querySelector("#section4 .left-arrow");
-            const rightArrow = document.querySelector("#section4 .right-arrow");
-
-            const titleEl = document.querySelector("#section4 .section4-left h3");
-            const descEl = document.querySelector("#section4 .section4-left p");
-            const numEl = document.querySelector("#section4 .section4-left .item-number");
-            const imgEl = document.querySelector("#section4 .section4-right img");
-
-            const slides = [
-                {
-                    num: "01",
-                    title: "1h00 Soin Clarifiant, 80€",
-                    desc: "Lissage des cheveux à sec, nettoyage, lotion, bain de vapeur + masque purifiant, cure intensive : ampoule visage, masque crème, massage du décolleté, étirement réveil de la musculature aux pieds.",
-                    img: "/static/assets/images/pexels-karola-g-6629551.jpg"
-                },
-                {
-                    num: "02",
-                    title: "1h00 Soin un temps pour moi, 80€",
-                    desc: "Lissage des cheveux à secs, nettoyage, lotion, stimulation lymphatique avec les pinceaux, cures intensives : ampoules visage ou spray, masque crème, effleurage décolleté, compresse chaude sur nuque + épaules, crème soin du jour.",
-                    img: "/static/assets/images/pexels-karola-g-6629554.jpg"
-                }
-            ];
-
-            let current = 0;
-
-            function fadeOutIn(element, newContent, isImage = false) {
-                element.classList.add("fade-out");
-                setTimeout(() => {
-                    if (isImage) {
-                        element.src = newContent;
-                    } else {
-                        element.textContent = newContent;
-                    }
-                    element.classList.remove("fade-out");
-                    element.classList.add("fade-in");
-                    setTimeout(() => element.classList.remove("fade-in"), 400);
-                }, 300);
-            }
-
-            function updateSlide(index) {
-                const slide = slides[index];
-                fadeOutIn(numEl, slide.num);
-                fadeOutIn(titleEl, slide.title);
-                fadeOutIn(descEl, slide.desc);
-                fadeOutIn(imgEl, slide.img, true);
-            }
-
-            leftArrow.addEventListener("click", () => {
-                current = (current - 1 + slides.length) % slides.length;
-                updateSlide(current);
-            });
-
-            rightArrow.addEventListener("click", () => {
-                current = (current + 1) % slides.length;
-                updateSlide(current);
-            });
-        });
-
-        document.addEventListener("DOMContentLoaded", () => {
-            const header = document.querySelector("header");
-
-            window.addEventListener("scroll", () => {
-                if (window.scrollY > 20) {
-                    header.style.backgroundColor = "#012d2c";
-                    header.style.position = "fixed";
-                    header.style.top = "0";
-                    header.style.left = "0";
-                    header.style.width = "100%";
-                    header.style.zIndex = "1000";
-                    header.style.transition = "background-color 0.3s ease";
-                    header.style.boxShadow = "0 2px 8px rgba(0, 0, 0, 0.15)";
-                } else {
-                    header.style.backgroundColor = "var(--green)";
-                    header.style.position = "fixed";
-                    header.style.boxShadow = "none";
-                }
-            });
-        });
-    </script>
+    <script src="/static/js/main.js" defer></script>
 </body>
 
 </html>
